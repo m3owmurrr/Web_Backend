@@ -17,13 +17,13 @@ $xml = file_get_contents('php://input');
 print($xml);
 
 // Память очищается в конце работы скрипта.
-if (isset($v1)) {
-  $v1++;
-}
-else {
-  $v1 = 1;
-}
-print($v1);
+// if (isset($v1)) {
+//   $v1++;
+// }
+// else {
+//   $v1 = 1;
+// }
+// print($v1);
 
 // Если надо выполнить код из другого файла.
 // include('form.php');
