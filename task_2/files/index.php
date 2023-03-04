@@ -10,12 +10,11 @@ header('Content-Type: text/html; charset=UTF-8');
 print_r($_POST);
 
 // Hello World
-print('Привет, мир!');
+print('Привет, мир! ');
 
 // Чтобы получить в переменную данные из сущности запроса.
 $xml = file_get_contents('php://input');
 print($xml);
-print('/r/n');
 
 // Память очищается в конце работы скрипта.
 if (isset($v1)) {
@@ -25,6 +24,7 @@ else {
   $v1 = 1;
 }
 print($v1);
+print(' ');
 
 // Если надо выполнить код из другого файла.
 // include('form.php');
