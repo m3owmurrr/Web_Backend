@@ -1,7 +1,7 @@
 <?php
 
 // Отправляем правильную кодировку.
-header('HTTP/1.1 404 Not Found');
+header('HTTP/1.1 200 OK');
 header('Content-Type: text/html; charset=UTF-8');
 
 // Выводим все полученные через POST параметры.
@@ -17,13 +17,13 @@ $xml = file_get_contents('php://input');
 print($xml);
 
 // Память очищается в конце работы скрипта.
-// if (isset($v1)) {
-//   $v1++;
-// }
-// else {
-//   $v1 = 1;
-// }
-// print($v1);
+if (isset($v1)) {
+  $v1++;
+}
+else {
+  $v1 = 1;
+}
+print($v1);
 
 // Если надо выполнить код из другого файла.
 // include('form.php');
