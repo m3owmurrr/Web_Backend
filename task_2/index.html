@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title> Задание 2 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task2.css">
+</head>
+
+<!-- meow -->
+
+<body>
+    <div class="answer_block container">
+        <div class="answer_panels d-flex flex-column align-items-center col-10 mx-auto">
+            <div class="answer_panel">
+                <h1>Главная страница методом GET в HTTP 1.0</h1>
+                <h5>В командную строку вводим команду telnet и ip-адрес сервера с портом 80. Далее отправляем запрос GET — метод для чтения данных с сайта</h5>
+                <img class="answer_photo" src="./get_main_1.png" alt="photo1">
+                <img class="answer_photo" src="./get_main_2.png" alt="photo2">
+            </div>
+            <div class="answer_panel">
+                <h1>Внутренняя странциа методом GET в HTTP 1.1</h1>
+                <h5>Подключаемся через telnet как и в предыдушем пункте. Далее после GET указываем требуемый внутренний объект и добавляем заголовок Host, в котором содержится имя домена, для которого предназначен запрос</h5>
+                <img class="answer_photo" src="./get_inside.png" alt="photo3">
+            </div>
+
+            <div class="answer_panel">
+                <h1>Размер файла, нескачивая его</h1>
+                <h5>Используем метод HEAD, который запрашивает ресурс так же, как и метод GET, но без тела ответа. В заголовке Content-Length содержится нужная информация</h5>
+                <img class="answer_photo" src="./head_file-size.png" alt="photo4">
+            </div>
+
+            <div class="answer_panel">
+                <h1>Медиатип ресурса</h1>
+                <h5>Используется метод HEAD. В заголовке Content-Type содержится нужная информация</h5>
+                <img class="answer_photo" src="./head_mediatype.png" alt="photo5">
+            </div>
+
+            <div class="answer_panel">
+                <h1>Отправка комментария на сервер по адресу</h1>
+                <h5>Используем метод POST, который предназначен для отправки данных на сервер. Дополнительно в заголовках указываем тип отправляемых данных и их размер</h5>
+                <img class="answer_photo" src="./post_comment.png" alt="photo6">
+            </div>
+
+            <div class="answer_panel">
+                <h1>Первые 100 байт файла</h1>
+                <h5>Используем метод HEAD и заголовок Range, в котором указываем диапазон от 0 до 99 и тип этого диапазона (bytes)</h5>
+                <img class="answer_photo" src="./head_partial-content.png" alt="photo7">
+            </div>
+
+            <div class="answer_panel">
+                <h1>Кодировка ресурса</h1>
+                <h5>Используем метод HEAD. В заголовке Content-Type содержится нужная информация</h5>
+                <img class="answer_photo" src="./head_charset.png" alt="photo7">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
