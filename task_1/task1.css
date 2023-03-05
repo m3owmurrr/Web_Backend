@@ -10,10 +10,17 @@ body {
     height: 100%;
     object-fit: contain;
     display: block;
-    margin-bottom: 10px;
 }
 
 .answer_panel {
     padding: 30px 30px;
-    margin-bottom: 20px;
+    margin: 15px 0;
+    background-color: #f9c6cf;
+    border-radius: 20px;
+    border: 10px dotted #ffabbc;
+
+}
+
+.answer_panel h5 {
+    margin-bottom: 1.5em;
 }

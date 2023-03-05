@@ -1,7 +1,7 @@
 /* main */
 body {
-   background: url("./back_paw.png"); 
-   background-size: 300px auto;
+    background: url("./back_leaves_4.png");
+    background-size: 300px auto;
 }
 
 /* answer */
@@ -10,10 +10,17 @@ body {
     height: 100%;
     object-fit: contain;
     display: block;
-    margin-bottom: 10px;
 }
 
 .answer_panel {
     padding: 30px 30px;
-    margin-bottom: 20px;
+    margin: 15px 0;
+    background-color: #5f995f;
+    border-radius: 20px;
+    border: 10px solid #44703a;
+
+}
+
+.answer_panel h5 {
+    margin-bottom: 1.5em;
 }
