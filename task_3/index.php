@@ -15,13 +15,16 @@ if (empty($_POST['name'])) {
     $errors = TRUE;
 }
 
-$errors = FALSE;
+
 if (empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     print('Заполните почту корректно.<br/>');
     $errors = TRUE;
 }
 
-if (empty($_POST['birthDate'])) {
+$birthDate = strtotime($_POST['birthDate']);
+$birthDate = date('Y-m-d', $birthDate);
+
+if (empty($birthDate)) {
     print('Заполните год.<br/>');
     $errors = TRUE;
 }
