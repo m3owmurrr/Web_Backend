@@ -24,3 +24,7 @@ body {
 .answer_panel h5 {
     margin-bottom: 1.5em;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+  }

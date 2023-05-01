@@ -1,0 +1,35 @@
+CREATE TABLE `application` (
+  `application_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(50) NOT NULL,
+  `email` VARCHAR(50) NOT NULL,
+  `birthDate` INT NOT NULL,
+  `gender` INT NOT NULL,
+  `numOfLimbs` INT NOT NULL,
+  `biography` VARCHAR(300) NULL DEFAULT NULL,
+  PRIMARY KEY (`application_id`)
+);
+
+CREATE TABLE `superpower` (
+  `sup_id` INT NOT NULL,
+  `name` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`sup_id`)
+);
+
+CREATE TABLE `application_superpower` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `app_id` INT NOT NULL,
+  `sup_id` INT NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+ALTER TABLE `application_superpower` ADD FOREIGN KEY (app_id) REFERENCES `application` (`application_id`);
+ALTER TABLE `application_superpower` ADD FOREIGN KEY (sup_id) REFERENCES `superpower` (`sup_id`);
+
+INSERT INTO superpower VALUES(1, '');
+INSERT INTO superpower VALUES(2, 'Fire Resistance');
+INSERT INTO superpower VALUES(3, 'Regeneration');
+INSERT INTO superpower VALUES(4, 'Night Vision');
+INSERT INTO superpower VALUES(5, 'Invisibility');
+INSERT INTO superpower VALUES(6, 'Leaping');
+INSERT INTO superpower VALUES(7, 'Water Breathing');
+INSERT INTO superpower VALUES(8, 'Swiftness');
