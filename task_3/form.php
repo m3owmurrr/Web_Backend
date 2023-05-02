@@ -52,13 +52,13 @@
                     <div class="form_elem">
                         <h5>Суперспособности</h5>
                         <select name="superPower" multiple="multiple" >
-                            <option value="value1"> Fire Resistance</option>
-                            <option value="value2"> Regeneration</option>
-                            <option value="value3"> Night Vision</option>
-                            <option value="value4"> Invisibility</option>
-                            <option value="value5"> Leaping</option>
-                            <option value="value5"> Water Breathing</option>
-                            <option value="value5"> Swiftness</option>
+                        <option value="2"> Fire Resistance</option>
+                            <option value="3"> Regeneration</option>
+                            <option value="4"> Night Vision</option>
+                            <option value="5"> Invisibility</option>
+                            <option value="6"> Leaping</option>
+                            <option value="7"> Water Breathing</option>
+                            <option value="8"> Swiftness</option>
                         </select>
                     </div>
                     <div class="form_elem">
