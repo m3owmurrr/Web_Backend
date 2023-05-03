@@ -17,11 +17,11 @@ CREATE TABLE `ability` (
 
 CREATE TABLE `personAbility` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `person_id` INT NOT NULL,
-  `ability_id` INT NOT NULL,
-  PRIMARY KEY (`id`)
-  FOREIGN KEY (person_id)  REFERENCES person (person_id)
-  FOREIGN KEY (ability_id)  REFERENCES person (ability_id)
+  `pers_id` INT NOT NULL,
+  `ab_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`pers_id`)  REFERENCES `person` (`person_id`),
+  FOREIGN KEY (`ab_id`)  REFERENCES `ability` (`ability_id`)
 );
 
 

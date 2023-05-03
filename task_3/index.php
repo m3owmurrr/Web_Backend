@@ -74,10 +74,10 @@ try {
 try {
     $stmt = $db->prepare("INSERT INTO person VALUES (null,:name,:email,:birthDate,:gender,:numOfLimbs,:biography)");
     $stmt -> execute(['name'=>$_POST['name'], 'email'=>$_POST['email'],'birthDate'=>$birthDate,'gender'=>$_POST['gender'],'numOfLimbs'=>$_POST['numOfLimbs'],'biography'=>$_POST['biography']]);
-    $app_id = $db->lastInsertId();
-    foreach ($_POST['superPower'] as $sup_id) {
-        $stmt = $db->prepare("INSERT INTO personAbility VALUES (null,:app_id,:sup_id)");
-        $stmt -> execute(['app_id'=>$app_id, 'sup_id'=>$sup_id]);
+    $pers_id = $db->lastInsertId();
+    foreach ($_POST['ability'] as $ab_id) {
+        $stmt = $db->prepare("INSERT INTO personAbility VALUES (null,:pers_id,:ab_id)");
+        $stmt -> execute(['pers_id'=>$pers_id, 'ab_id'=>$ab_id]);
       }
     } catch(PDOException $error){
         print('Error : ' . $error->getMessage());

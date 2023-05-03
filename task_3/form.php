@@ -51,7 +51,7 @@
                     </div>
                     <div class="form_elem">
                         <h5>Суперспособности</h5>
-                        <select name="superPower[]" multiple="multiple" >
+                        <select name="ability[]" multiple="multiple" >
                             <option value="1"> Fire Resistance</option>
                             <option value="2"> Regeneration</option>
                             <option value="3"> Night Vision</option>
