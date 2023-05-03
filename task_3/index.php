@@ -39,7 +39,7 @@ if (empty($_POST['numOfLimbs'])) {
     $errors = TRUE;
 }
 
-if (empty($_POST['superPower'])) {
+if (empty($_POST['ability'])) {
     print('Выберите хотя бы одну способность.<br/>');
     $errors = TRUE;
 }
