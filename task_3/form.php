@@ -46,19 +46,19 @@
                         <span>3 &nbsp&nbsp</span>
                         <input type="radio" name="numOfLimbs" value="4">
                         <span>4 &nbsp&nbsp</span>
-                        <input type="radio" name="numOfLimbs" value=">4">
+                        <input type="radio" name="numOfLimbs" value="5">
                         <span>>4 &nbsp&nbsp</span>
                     </div>
                     <div class="form_elem">
                         <h5>Суперспособности</h5>
-                        <select name="superPower" multiple="multiple" >
-                        <option value="2"> Fire Resistance</option>
-                            <option value="3"> Regeneration</option>
-                            <option value="4"> Night Vision</option>
-                            <option value="5"> Invisibility</option>
-                            <option value="6"> Leaping</option>
-                            <option value="7"> Water Breathing</option>
-                            <option value="8"> Swiftness</option>
+                        <select name="superPower[]" multiple="multiple" >
+                            <option value="1"> Fire Resistance</option>
+                            <option value="2"> Regeneration</option>
+                            <option value="3"> Night Vision</option>
+                            <option value="4"> Invisibility</option>
+                            <option value="5"> Leaping</option>
+                            <option value="6"> Water Breathing</option>
+                            <option value="7"> Swiftness</option>
                         </select>
                     </div>
                     <div class="form_elem">

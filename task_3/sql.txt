@@ -1,35 +1,34 @@
-CREATE TABLE `application` (
-  `application_id` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE `person` (
+  `person_id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(50) NOT NULL,
   `email` VARCHAR(50) NOT NULL,
-  `birthDate` INT NOT NULL,
-  `gender` INT NOT NULL,
+  `birthDate` DATE NOT NULL,
+  `gender` VARCHAR(6) NOT NULL,
   `numOfLimbs` INT NOT NULL,
-  `biography` VARCHAR(300) NULL DEFAULT NULL,
-  PRIMARY KEY (`application_id`)
+  `biography` VARCHAR(300),
+  PRIMARY KEY (`person_id`)
 );
 
-CREATE TABLE `superpower` (
-  `sup_id` INT NOT NULL,
+CREATE TABLE `ability` (
+  `ability_id` INT NOT NULL,
   `name` VARCHAR(50) NOT NULL,
-  PRIMARY KEY (`sup_id`)
+  PRIMARY KEY (`ability_id`)
 );
 
-CREATE TABLE `application_superpower` (
+CREATE TABLE `personAbility` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `app_id` INT NOT NULL,
-  `sup_id` INT NOT NULL,
+  `person_id` INT NOT NULL,
+  `ability_id` INT NOT NULL,
   PRIMARY KEY (`id`)
+  FOREIGN KEY (person_id)  REFERENCES person (person_id)
+  FOREIGN KEY (ability_id)  REFERENCES person (ability_id)
 );
 
-ALTER TABLE `application_superpower` ADD FOREIGN KEY (app_id) REFERENCES `application` (`application_id`);
-ALTER TABLE `application_superpower` ADD FOREIGN KEY (sup_id) REFERENCES `superpower` (`sup_id`);
 
-INSERT INTO superpower VALUES(1, '');
-INSERT INTO superpower VALUES(2, 'Fire Resistance');
-INSERT INTO superpower VALUES(3, 'Regeneration');
-INSERT INTO superpower VALUES(4, 'Night Vision');
-INSERT INTO superpower VALUES(5, 'Invisibility');
-INSERT INTO superpower VALUES(6, 'Leaping');
-INSERT INTO superpower VALUES(7, 'Water Breathing');
-INSERT INTO superpower VALUES(8, 'Swiftness');
+INSERT INTO ability VALUES(1, 'Fire Resistance');
+INSERT INTO ability VALUES(2, 'Regeneration');
+INSERT INTO ability VALUES(3, 'Night Vision');
+INSERT INTO ability VALUES(4, 'Invisibility');
+INSERT INTO ability VALUES(5, 'Leaping');
+INSERT INTO ability VALUES(6, 'Water Breathing');
+INSERT INTO ability VALUES(7, 'Swiftness');
