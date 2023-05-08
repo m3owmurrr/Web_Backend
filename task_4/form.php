@@ -41,7 +41,8 @@
                             </div>
                             <div class="form_error col-6">
                                 <?php
-                                print $messages['email'];
+                                if (!empty($messages['email']))
+                                    print $messages['email'];
                                 ?>
                             </div>
                         </div>
