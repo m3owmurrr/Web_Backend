@@ -137,6 +137,7 @@ try {
         exit();
     }
 
+    setcookie('save', 1);
     header('Location: /task_4');
 }
 ?>
