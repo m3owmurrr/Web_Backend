@@ -24,7 +24,8 @@
                             </div>
                             <div class="form_error col-6">
                                 <?php
-                                print $messages['name'];
+                                if (!empty($messages['name']))
+                                    print $messages['name'];
                                 ?>
                             </div>
                         </div>
@@ -59,7 +60,8 @@
                             </div>
                             <div class="form_error col-6">
                                 <?php
-                                print $messages['birthDate'];
+                                if (!empty($messages['birthDate']))
+                                    print $messages['birthDate'];
                                 ?>
                             </div>
                         </div>
@@ -86,7 +88,8 @@
                             </div>
                             <div class="form_error col-6">
                                 <?php
-                                print $messages['gender'];
+                                if (!empty($messages['gender']))
+                                    print $messages['gender'];
                                 ?>
                             </div>
                         </div>
@@ -124,7 +127,8 @@
                             </div>
                             <div class="form_error col-6">
                                 <?php
-                                print $messages['numOfLimbs'];
+                                if (!empty($messages['numOfLimbs']))
+                                    print $messages['numOfLimbs'];
                                 ?>
                             </div>
                         </div>
@@ -152,7 +156,8 @@
                             </div>
                             <div class="form_error col-6">
                                 <?php
-                                print $messages['ability'];
+                                if (!empty($messages['ability']))
+                                    print $messages['ability'];
                                 ?>
                             </div>
                         </div>
@@ -179,7 +184,8 @@
                             </div>
                             <div class="form_error col-6">
                                 <?php
-                                print $messages['check'];
+                                if (!empty($messages['check']))
+                                    print $messages['check'];
                                 ?>
                             </div>
                         </div>
@@ -189,7 +195,8 @@
                     <div class="form_elem">
                         <input type="submit" value="Отправить">
                         <?php
-                        print $messages['save'];
+                        if (!empty($messages['save']))
+                            print $messages['save'];
                         ?>
                     </div>
 
