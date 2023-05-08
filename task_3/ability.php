@@ -1,11 +1,11 @@
-<?php  
+<?php
 $flag = true;
 if ($flag) {
     try {
-        $user = 'root';
-        $pass = null;
+        $user = 'u52960';
+        $pass = '7531864';
         $db = new PDO(
-            'mysql:host=localhost;dbname=webBack',
+            'mysql:host=localhost;dbname=u52960',
             $user,
             $pass,
             [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
@@ -24,6 +24,7 @@ if ($flag) {
         print('Error : ' . $error->getMessage());
         exit();
     }
-    $flag++;
+    $flag = FALSE;;
+    $db = null;
 }
 ?>
