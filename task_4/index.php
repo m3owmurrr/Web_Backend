@@ -70,11 +70,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (!empty($_POST['ability']))
         setcookie('ability_value', json_encode($_POST['ability']), time() + 30 * 24 * 60 * 60);
 
-
+        
     $errors = array();
 
     if (empty($_POST['name'])) {
         $errors['name'] = '<span class="error">Заполните имя</span>';
+    } else if (!preg_match('/^[a-zA-Zа-яА-Я\s]+$/u', $_POST['name'])) {
+        $errors['name'] = '<span class="error">Используйте только буквы в данном поле</span>';
     }
 
     if (empty($_POST['email'])) {
