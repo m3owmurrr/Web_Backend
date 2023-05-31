@@ -13,9 +13,9 @@ body {
     width: 100%;
     padding: 30px 30px;
     margin: 15px 0;
-    background-color: #ffffff;
+    background-color: #fcf185;
     border-radius: 20px;
-    border: 10px inset #0072bb;
+    border: 10px double #659620;
 
 }
 
@@ -47,10 +47,10 @@ body {
 
 input, select, textarea {
     border-style: solid;
-    border-color: #0072bb;
+    border-color: #80583f;
     border-radius: 7px;
     border-width: 3px;
-    background-color: #fffeff;
+    background-color: #fcf185;
 }
 
 
