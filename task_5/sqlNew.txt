@@ -1,0 +1,7 @@
+CREATE TABLE user (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    pers_id INT,
+    login VARCHAR(100),
+    password_hash VARCHAR(255),
+    FOREIGN KEY (pers_id) REFERENCES person(person_id)
+);
