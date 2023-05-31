@@ -173,7 +173,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         return $random_string;
     }
 
-    if (session_start() && !empty($_SESSION['uid'])) {
+    if (!empty($_SESSION['uid'])) {
         try {
             $user = 'u52960';
             $pass = '7531864';
