@@ -1,0 +1,65 @@
+/* main */
+body {
+    background: url("./back_avocado.jpg");
+    background-size: 400px auto;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* form */
+.form_panel {
+    width: 100%;
+    padding: 30px 30px;
+    margin: 15px 0;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 10px inset #0072bb;
+
+}
+
+.form_panel h5 {
+    margin-bottom: 0.5em;
+}
+
+.form_elem {
+    margin: 15px 0;
+}
+
+
+.form_error{
+    position: relative;
+    padding-left: 0;
+}
+
+.form_error span {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+
+.crutch {
+    width: 100%;
+}
+
+input, select, textarea {
+    border-style: solid;
+    border-color: #0072bb;
+    border-radius: 7px;
+    border-width: 3px;
+    background-color: #fffeff;
+}
+
+
+
+.error {
+    color: #990000;
+    border-color: #990000;
+}
+
+.ok {
+    color: rgb(90, 150, 30);
+}
