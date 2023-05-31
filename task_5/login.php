@@ -54,8 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                         <div class="form_elem">
                             <h5>Логин</h5>
                             <div class="form_field">
-                                <input type="name" name="login" placeholder="введите логин" class="crutch"
-                                    value="<?php print $values['login']; ?>">
+                                <input type="name" name="login" placeholder="введите логин" class="crutch">
                             </div>
                             <div class="form_error_log">
                                 <?php
