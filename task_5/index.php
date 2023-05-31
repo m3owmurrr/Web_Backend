@@ -242,6 +242,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     setcookie('save', 1);
     setcookie('login', $login);
     setcookie('password', $password);
-    header('Location: /');
+    header('Location: ./');
 }
 ?>
