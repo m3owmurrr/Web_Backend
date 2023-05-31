@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
     if ($error) {
         session_destroy();
-        header('Location: /login.php');
+        header('Location: ./login.php');
         exit();
     }
 
@@ -134,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             setcookie('enter_error', '<span class="error">Неверный логин</span>', time() + 24 * 60 * 60);
            echo ('Неверный логин');
            session_destroy();
-           header('Location: /login.php');
+           header('Location: ./login.php');
            exit();
         } else {
             setcookie('login', $_POST['login'], time() + 24 * 60 * 60);
@@ -145,12 +145,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 echo ('Неверный пароль');
                 setcookie('enter_error', '<span class="error">Неверный пароль</span>', time() + 24 * 60 * 60);
                 session_destroy();
-                header('Location: /login.php');
+                header('Location: ./login.php');
                 exit();
             }
         }
     } catch (PDOException $e) {
         die($e->getMessage());
     }
-    header('Location: /index.php');
+    header('Location: ./');
 }
