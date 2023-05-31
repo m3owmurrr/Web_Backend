@@ -8,8 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $messages = array();
     if (!empty($_COOKIE['save'])) {
         setcookie('save', null, -1);
-        setcookie('login', null, -1);
-        setcookie('password', null, -1);
+        setcookie('login', '', -1);
+        setcookie('password', '', -1);
         $messages['save'] = '<span class="ok"> Спасибо, результаты сохранены </span>';
         $messages['login'] = '<span class="ok"> Ваш логин ' . $_COOKIE['login'] . '</span>';
         $messages['password'] = '<span class="ok"> Ваш пароль ' . $_COOKIE['password'] . '</span>';
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             foreach ($temp as $value) {
                 array_push($ab, $value['ab_id']);
             }
-            $values['ability']  = json_encode($ab);
+            $values['ability'] = json_encode($ab);
 
         } catch (PDOException $e) {
             print('Error: ' . $e->getMessage());
