@@ -174,19 +174,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
 
 
-    try {
-        $user = 'root';
-        $pass = null;
-        $db = new PDO(
-            'mysql:host=localhost;dbname=webBack',
-            $user,
-            $pass,
-            [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-        );
-    } catch (PDOException $error) {
-        exit($error->getMessage());
-    }
-
 
     $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&';
     function generate_string($input, $strength = 16)
@@ -202,10 +189,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (session_start() && !empty($_SESSION['uid'])) {
         try {
-            $user = 'root';
-            $pass = null;
+            $user = 'u52960';
+            $pass = '7531864';
             $db = new PDO(
-                'mysql:host=localhost;dbname=webBack',
+                'mysql:host=localhost;dbname=u52960',
                 $user,
                 $pass,
                 [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
@@ -233,6 +220,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $password = generate_string($permitted_chars, 8);
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
+        try {
+            $user = 'u52960';
+            $pass = '7531864';
+            $db = new PDO(
+                'mysql:host=localhost;dbname=u52960',
+                $user,
+                $pass,
+                [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+            );
+        } catch (PDOException $error) {
+            exit($error->getMessage());
+        }
         try {
             $stmt = $db->prepare("INSERT INTO person VALUES (null,:name,:email,:birthDate,:gender,:numOfLimbs,:biography)");
             $stmt->execute(['name' => $name, 'email' => $email, 'birthDate' => $birthDate, 'gender' => $gender, 'numOfLimbs' => $numOfLimbs, 'biography' => $biography]);

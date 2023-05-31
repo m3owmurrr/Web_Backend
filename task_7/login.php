@@ -110,17 +110,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         exit();
     }
 
-
     try {
-        $user = 'root';
-        $pass = null;
+        $user = 'u52960';
+        $pass = '7531864';
         $db = new PDO(
-            'mysql:host=localhost;dbname=webBack',
+            'mysql:host=localhost;dbname=u52960',
             $user,
             $pass,
             [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
         );
-
+    } catch (PDOException $error) {
+        exit($error->getMessage());
+    }
+    try {
         $stmt = $db->prepare("SELECT * FROM user WHERE login=:login");
         $stmt->execute(['login' => $_POST['login']]);
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
