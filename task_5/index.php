@@ -8,8 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $messages = array();
     if (!empty($_COOKIE['save'])) {
         setcookie('save', null, -1);
-        setcookie('login', '', -1);
-        setcookie('password', '', -1);
+        setcookie('login', null, -1);
+        setcookie('password', null, -1);
         $messages['save'] = '<span class="ok"> Спасибо, результаты сохранены </span>';
         $messages['login'] = '<span class="ok"> Ваш логин ' . $_COOKIE['login'] . '</span>';
         $messages['password'] = '<span class="ok"> Ваш пароль ' . $_COOKIE['password'] . '</span>';
@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         foreach ($errors as $key => $value) {
             setcookie($key . '_error', $value, time() + 24 * 60 * 60);
         }
-        header('Location: /');
+        header('Location: ./');
         exit();
     }
 
