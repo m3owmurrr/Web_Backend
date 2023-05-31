@@ -1,6 +1,4 @@
 <?php    
-if ($flag) {
-} else {
     try {
         $user = 'u52960';
         $pass = '7531864';
@@ -25,5 +23,4 @@ if ($flag) {
         exit();
     }
     $flag = true;
-}
 ?>
