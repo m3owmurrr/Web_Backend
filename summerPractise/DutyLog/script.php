@@ -1,6 +1,9 @@
 <?php
 include('../other/dbconnect.php' );
 if ($_SERVER['REQUEST_METHOD'] == 'GET' || $_POST['action'] == 'search') {
+    if(empty($_POST['action'])) {
+        $_POST['action'] = "";
+    }
     if ($_POST['action'] == 'search') {
         $statement = $pdo->prepare("SELECT duty_id, guard_id, post_id, duty_date FROM DutyLog WHERE duty_date LIKE CONCAT('%', :search_query, '%')");
         $statement->execute(['search_query' => $_POST['search_query']]);

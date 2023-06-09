@@ -1,6 +1,9 @@
 <?php
 include('../other/dbconnect.php');
 if ($_SERVER['REQUEST_METHOD'] == 'GET' || $_POST['action'] == 'search') {
+    if(empty($_POST['action'])) {
+        $_POST['action'] = "";
+    }
     if ($_POST['action'] == 'search') {
         $statement = $pdo->prepare("SELECT guard_id, guard_name, guard_rank FROM Guards WHERE guard_name LIKE CONCAT('%', :search_query, '%') OR guard_rank LIKE CONCAT('%', :search_query, '%')");
         $statement->execute(['search_query' => $_POST['search_query']]);
