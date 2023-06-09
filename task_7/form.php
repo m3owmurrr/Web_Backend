@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<?php 
+ <?php 
     if (!empty($_SESSION['login'])) {
         print '<a href="login.php" style="position: absolute">выйти</a>';
     }else{
